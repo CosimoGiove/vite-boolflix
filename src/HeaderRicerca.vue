@@ -25,13 +25,13 @@ export default {
 <template>
     <header>
         <input type="search" name="ricercafilm" id="film" v-model="RicercaFilm">
+        <button @click="film">cerca</button>
         <div v-for="ArrayFilms in ArrayFilm.results">
             <h2>titolo : {{ ArrayFilms.title }} </h2>
             <h2>titolo originale : {{ ArrayFilms.original_title }}</h2>
             <h2> lingua : {{ ArrayFilms.original_language }}</h2>
             <h2>voto : {{ ArrayFilms.vote_average }}</h2>
         </div>
-        <button @click="film">cerca</button>
     </header>
 </template>
 <style scoped></style>
