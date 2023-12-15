@@ -34,12 +34,14 @@ export default {
     <main>
         <div v-for="ArrayFilm in store.ArrayFilm.results">
             <card :titolo="ArrayFilm.title" :TitoloOriginale="ArrayFilm.original_title"
-                :lingua="ArrayFilm.original_language" :voto="ArrayFilm.vote_average">
+                :lingua="ArrayFilm.original_language" :voto="ArrayFilm.vote_average"
+                :immagineFilm="ArrayFilm.backdrop_path">
             </card>
         </div>
         <div v-for="ArrayFilm in store.ArraySerie.results">
             <serie :NomeSerie="ArrayFilm.name" :NomeOriginale="ArrayFilm.original_name"
-                :LinguaOriginale="ArrayFilm.original_language" :VotoSerie="ArrayFilm.vote_average"></serie>
+                :LinguaOriginale="ArrayFilm.original_language" :VotoSerie="ArrayFilm.vote_average"
+                :ImmagineSerie="ArrayFilm.poster_path"></serie>
         </div>
     </main>
 </template>

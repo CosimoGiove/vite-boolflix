@@ -1,7 +1,13 @@
 <script>
+import { store } from './store';
 export default {
     name: "card",
-    props: ["NomeSerie", "NomeOriginale", "LinguaOriginale", "VotoSerie"]
+    props: ["NomeSerie", "NomeOriginale", "LinguaOriginale", "VotoSerie","ImmagineSerie"],
+    data(){
+        return{
+            store,
+        }
+    }
 }
 </script>
 <template>
@@ -28,6 +34,11 @@ export default {
                 </li>
                 <li>
                     <h4>voto: {{ VotoSerie }}</h4>
+                </li>
+                <li>
+                    <div>
+                        <img :src="store.pathimg + ImmagineSerie" :alt=" 'immagine non trovata :' + NomeSerie">
+                    </div>
                 </li>
             </ul>
         </div>
