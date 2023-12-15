@@ -1,18 +1,19 @@
 <script>
-import HeaderRicerca from './HeaderRicerca.vue';
-export default{
-  name:"appvue",
-  components:{
-    HeaderRicerca,
+import maincard from './maincard.vue';
+import header1 from './header1.vue';
+export default {
+  name: "appvue",
+  components: {
+    maincard,
+    header1,
   }
 }
 </script>
 
 <template>
-  <HeaderRicerca></HeaderRicerca>
-
+  <header1></header1>
+  <maincard>
+  </maincard>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
