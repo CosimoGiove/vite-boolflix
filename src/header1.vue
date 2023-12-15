@@ -20,8 +20,8 @@ export default {
                     this.store.ArraySerie = data.data
                     this.store.RicercaFilm = ""
                 })
-        }
-    },
+        },
+    }
 }
 </script>
 <template>

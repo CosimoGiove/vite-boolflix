@@ -7,6 +7,11 @@ export default {
         return {
             store,
         }
+    },
+    methods: {
+        numeroIntero() {
+            return Math.ceil(this.voto / 2)
+        }
     }
 }
 </script>
@@ -16,13 +21,22 @@ export default {
             <h2>film</h2>
             <ul>
                 <li>
-                    <h4>titolo : {{titolo }} </h4>
+                    <h4>titolo : {{ titolo }} </h4>
                 </li>
                 <li>
-                    <h4>titolo originale : {{TitoloOriginale }}</h4>
+                    <h4>titolo originale : {{ TitoloOriginale }}</h4>
                 </li>
                 <li>
-                    <h4>voto:{{ voto }}</h4>
+                    <h4>voto:{{ numeroIntero() }}</h4>
+                    <span v-for="n in 5">
+                        <span v-if="numeroIntero() === 5">
+                            <font-awesome-icon icon="fa-solid fa-star" />
+                        </span>
+                        <!-- <span v-else-if="hello() !== 5">
+                         <font-awesome-icon icon="fa-regular fa-star"/>
+                        </span>           -->
+                    </span>
+
                 </li>
                 <li>
                     <h4 v-if="lingua === 'it'">
@@ -32,12 +46,12 @@ export default {
                         <span class="fi fi-gb"></span>
                     </h4>
                     <h4 v-else="">
-                        lingua: {{lingua }}
+                        lingua: {{ lingua }}
                     </h4>
                 </li>
                 <li>
                     <div>
-                        <img :src="store.pathimg + immagineFilm" :alt=" 'immagine non trovata :' + titolo">
+                        <img :src="store.pathimg + immagineFilm" :alt="'immagine non trovata :' + titolo">
                     </div>
                 </li>
             </ul>
