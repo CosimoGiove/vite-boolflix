@@ -11,7 +11,7 @@ export default {
     methods: {
         numeroIntero() {
             return Math.ceil(this.voto / 2)
-        }
+        },
     }
 }
 </script>
@@ -28,15 +28,14 @@ export default {
                 </li>
                 <li>
                     <h4>voto:{{ numeroIntero() }}</h4>
-                    <span v-for="n in 5">
-                        <span v-if="numeroIntero() === 5">
-                            <font-awesome-icon icon="fa-solid fa-star" />
-                        </span>
-                        <!-- <span v-else-if="hello() !== 5">
-                         <font-awesome-icon icon="fa-regular fa-star"/>
-                        </span>           -->
+                    <span v-for="n in numeroIntero()">
+                        <font-awesome-icon icon="fa-solid fa-star" />
                     </span>
-
+                    <span v-if="numeroIntero() < 5">
+                        <span v-for=" stella in 5 - numeroIntero()">
+                            <font-awesome-icon icon="fa-regular fa-star" />
+                        </span>
+                    </span>
                 </li>
                 <li>
                     <h4 v-if="lingua === 'it'">
