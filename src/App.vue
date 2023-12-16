@@ -16,4 +16,6 @@ export default {
   </maincard>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use "style.scss" as *;
+</style>

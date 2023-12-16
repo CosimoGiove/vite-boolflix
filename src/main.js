@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import './style.scss'
 import App from './App.vue'
 import  "/node_modules/flag-icons/css/flag-icons.min.css" ;
 import { library } from '@fortawesome/fontawesome-svg-core'

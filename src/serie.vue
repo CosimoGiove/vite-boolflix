@@ -17,44 +17,73 @@ export default {
 </script>
 <template>
     <main>
-        <div>
-            <h1>serie</h1>
-            <ul>
-                <li>
-                    <h4>titolo serie: {{ NomeSerie }}</h4>
-                </li>
-                <li>
-                    <h4>titolo originale serie:{{ NomeOriginale }}</h4>
-                </li>
-                <li>
-                    <h4 v-if="LinguaOriginale === 'it'">
-                        <span class="fi fi-it"></span>
-                    </h4>
-                    <h4 v-else-if="LinguaOriginale === 'en'">
-                        <span class="fi fi-gb"></span>
-                    </h4>
-                    <h4 v-else="">
-                        lingua: {{ LinguaOriginale }}
-                    </h4>
-                </li>
-                <li>
-                    <h4>voto:{{ numeroInteroSerie() }}</h4>
-                    <span v-for="n in numeroInteroSerie()">
-                        <font-awesome-icon icon="fa-solid fa-star" />
+        <div class="containerserie">
+            <div class="prospettiva">
+                <img :src="store.pathimg + ImmagineSerie" :alt="'immagine non trovata :' + NomeSerie">
+                <h4 class="titolo">
+                    <span>titolo serie:</span>
+                    {{ NomeSerie }}
+                </h4>
+                <h4><span>titolo originale serie:</span>
+                    {{ NomeOriginale }}
+                </h4>
+                <h4><span>voto:</span>
+                    {{ numeroInteroSerie() }}
+                </h4>
+                <span v-for="n in numeroInteroSerie()">
+                    <font-awesome-icon icon="fa-solid fa-star" />
+                </span>
+                <span v-if="numeroInteroSerie() < 5">
+                    <span v-for=" stella in 5 - numeroInteroSerie()">
+                        <font-awesome-icon icon="fa-regular fa-star" />
                     </span>
-                    <span v-if="numeroInteroSerie() < 5">
-                        <span v-for=" stella in 5 - numeroInteroSerie()">
-                            <font-awesome-icon icon="fa-regular fa-star" />
-                        </span>
-                    </span>
-                </li>
-                <li>
-                    <div>
-                        <img :src="store.pathimg + ImmagineSerie" :alt="'immagine non trovata :' + NomeSerie">
-                    </div>
-                </li>
-            </ul>
+                </span>
+                <h4 v-if="LinguaOriginale === 'it'">
+                    <span class="fi fi-it"></span>
+                </h4>
+                <h4 v-else-if="LinguaOriginale === 'en'">
+                    <span class="fi fi-gb"></span>
+                </h4>
+                <h4 v-else="">
+                    lingua: {{ LinguaOriginale }}
+                </h4>
+            </div>
+            <!-- <h1>serie</h1> -->
         </div>
     </main>
 </template>
-<style scoped></style>
+<style lang="scss" scoped>
+.containerserie {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    .prospettiva{
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 0.6s;
+
+    }
+    .titolo{
+        margin-top: 20px;
+    }
+    img {
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 20px black;
+    }
+    .prospettiva:hover {
+        transform: translateZ(20px) rotateX(1deg) rotateY(10deg);
+        box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+        transform: translatey(20px) rotateX(1deg) rotateY(10deg);
+    }
+
+    span {
+        color: red;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    h4 {
+        margin: 10px 0px;
+    }
+}
+</style>
