@@ -130,9 +130,10 @@ export default {
 
     img {
         border-radius: 10px;
-        width: 90%;
+        width: 85%;
         display: block;
         margin: 0 auto;
+        padding-bottom: 30px;
     }
 }
 </style>

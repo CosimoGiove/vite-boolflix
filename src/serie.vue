@@ -48,7 +48,7 @@ export default {
                     <h4 v-else="">
                         lingua: {{ LinguaOriginale }}
                     </h4>
-                    <div>
+                    <div class="descrizioneover">
                         {{ descrizioneserie }}
                     </div>
                 </div>
@@ -67,7 +67,11 @@ export default {
         position: relative;
         transform-style: preserve-3d;
         transition: 0.6s;
+        padding-bottom: 100px;
 
+    }
+    .descrizioneover{
+        font-size: 14px;
     }
 
     .prospettiva:hover img {
@@ -85,6 +89,7 @@ export default {
         position: absolute;
         top: 0;
         left: 0;
+        color: white;
     }
 
     .titolo {
@@ -93,7 +98,7 @@ export default {
 
     img {
         border-radius: 10px;
-        width: 90%;
+        width: 80%;
     }
 
     .prospettiva:hover {
@@ -105,7 +110,7 @@ export default {
     span {
         color: red;
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     h4 {
