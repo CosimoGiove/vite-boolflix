@@ -64,13 +64,13 @@ export default {
 .containerfilm {
     width: 100%;
     perspective: 900px;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: 80px;
 
     .prospettiva {
         position: relative;
         transform-style: preserve-3d;
         transition: 0.8s;
-        padding: 50px 0px;
     }
 
     .prospettiva:hover {
