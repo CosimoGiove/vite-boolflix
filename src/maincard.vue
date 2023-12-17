@@ -55,7 +55,7 @@ export default {
         <div>
             <h2 class="selezionefilm">
                 {{ this.store.ArrayFilm.results.length}}
-                Film
+                Film trovati
             </h2>
             <div class="container">
                 <div class="containerfilm" v-for="ArrayFilm in store.ArrayFilm.results">
@@ -70,7 +70,7 @@ export default {
         <div>
             <h2 class="selezioneserie">
                 {{ this.store.ArraySerie.results.length}}
-                SerieTv:</h2>
+                SerieTv trovate</h2>
             <div class="container">
                 <div class="containerserie" v-for="ArraySerie in store.ArraySerie.results">
                     <serie :NomeSerie="ArraySerie.name" :NomeOriginale="ArraySerie.original_name"
@@ -100,6 +100,7 @@ export default {
     color: red;
     padding-left: 30px;
     background-color: #303030;
+    font-size: 30px;
 
 }
 
