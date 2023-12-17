@@ -10,6 +10,9 @@ export default {
     },
     methods: {
         film() {
+            if(this.store.RicercaFilm === ""){
+                location.reload()
+            }else{
             axios.get(this.store.UrlFilm + this.store.RicercaFilm)
                 .then((data) => {
                     this.store.ArrayFilm = data.data
@@ -20,6 +23,11 @@ export default {
                     this.store.ArraySerie = data.data
                     this.store.RicercaFilm = ""
                 })
+            }
+
+        },
+        aggiorna() {
+            location.reload()
         },
     }
 }
@@ -29,7 +37,9 @@ export default {
         <div class="containerheader">
             <div>
                 <ul>
-                    <li><h1>Booflix</h1></li>
+                    <li>
+                        <h1 @click="aggiorna">Booflix</h1>
+                    </li>
                     <li>home</li>
                     <li>serie tv</li>
                     <li>film</li>
@@ -42,13 +52,15 @@ export default {
                 <input type="search" name="ricercafilm" id="film" v-model="store.RicercaFilm">
                 <button class="bottonericerca" @click="film">cerca</button>
             </div>
-
+        </div>
+        <div class=" nessunfilm ciao">
+            <h1>nessun film trovato</h1>
         </div>
 
     </header>
 </template>
 <style lang="scss" scoped>
-header{
+header {
 
     background-color: black;
     padding: 10px;
@@ -56,7 +68,16 @@ header{
     z-index: 9999;
     right: 0px;
     left: 0px;
-    ul li{
+
+    .on {
+        height: 100px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    ul li {
         display: inline-block;
         vertical-align: middle;
         color: white;
@@ -64,13 +85,24 @@ header{
         font-size: 20px;
         cursor: pointer;
     }
+
+    .ciao {
+        display: none;
+        height: 500px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+
+    }
 }
+
 .containerheader {
     display: flex;
     justify-content: space-between;
     margin: 10px 0px;
     align-items: center;
-    .bottonericerca{
+
+    .bottonericerca {
         margin-left: 20px;
         background-color: white;
         color: red;
@@ -78,14 +110,14 @@ header{
         padding: 5px 10px;
 
     }
-    h1{
+
+    h1 {
         color: red;
         font-size: 50px;
     }
 
-    #film{
+    #film {
         font-size: 25px;
         vertical-align: middle;
     }
-}
-</style>
+}</style>
