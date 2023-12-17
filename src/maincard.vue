@@ -54,7 +54,7 @@ export default {
     <main>
         <div>
             <h2 class="selezionefilm">
-                {{ this.store.ArrayFilm.results.length}}
+                {{ store.ArrayFilm.results.length }}
                 Film trovati
             </h2>
             <div class="container">

@@ -53,9 +53,6 @@ export default {
                 <button class="bottonericerca" @click="film">cerca</button>
             </div>
         </div>
-        <div class=" nessunfilm ciao">
-            <h1>nessun film trovato</h1>
-        </div>
 
     </header>
 </template>
@@ -69,13 +66,7 @@ header {
     right: 0px;
     left: 0px;
 
-    .on {
-        height: 100px;
-        background-color: red;
-        justify-content: center;
-        align-items: center;
-        display: block;
-    }
+
 
     ul li {
         display: inline-block;
@@ -84,15 +75,6 @@ header {
         margin-left: 20px;
         font-size: 20px;
         cursor: pointer;
-    }
-
-    .ciao {
-        display: none;
-        height: 500px;
-        background-color: red;
-        justify-content: center;
-        align-items: center;
-
     }
 }
 
