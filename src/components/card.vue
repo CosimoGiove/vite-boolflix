@@ -138,7 +138,53 @@ export default {
         width: 80%;
         display: block;
         margin: 0 auto;
-        padding-bottom: 30px;
+    }
+    @media screen and ( max-width: 1400px){
+        .prospettiva{
+            padding-bottom: 150px;
+
+        } 
+    }
+    @media screen and ( max-width: 992px){
+        .titolo, .titolooriginale{
+            font-size: 13px;
+        }
+        h3{
+            font-size: 13px;
+        }
+        .prospettiva{
+            padding-bottom: 150px;
+
+        }
+    }
+    @media screen and ( max-width: 768px){
+        .titolo, .titolooriginale{
+            font-size: 10px;
+        }
+        h3{
+            font-size: 10px;
+        }
+        .prospettiva{
+            padding-bottom: 150px;
+
+        }
+
+
+    }
+    @media screen and ( max-width: 575px){
+        h3{
+            font-size: 18px;
+        }
+        .titolo{
+            font-size: 18px;
+        }
+        .prospettiva{
+            padding-bottom: 30px;
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+
+        }
     }
 }
 </style>

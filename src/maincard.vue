@@ -43,11 +43,7 @@ export default {
                     this.store.RicercaFilm = ""
                 })
         },
-
-
-
     }
-
 }
 </script>
 <template>
@@ -96,7 +92,7 @@ export default {
     color: red;
 }
 .selezionefilm{
-    padding-top: 110px;
+    padding-top: 130px;
     color: red;
     padding-left: 30px;
     background-color: #303030;
@@ -117,4 +113,60 @@ export default {
     flex-wrap: wrap;
     background-color: #303030;
 }
+ /* media queries */
+
+ @media screen and ( max-width: 992px){
+    .selezionefilm{
+        font-size: 20px;
+    }
+    .selezioneserie{
+        font-size: 20px;
+    }
+    .containerfilm{
+        width: calc(100% / 3);
+        font-size: 15px;
+    }
+    .containerserie{
+        width: calc(100% / 3);
+        font-size: 15px;
+    }
+
+ }
+
+ @media screen and ( max-width: 768px){
+    .selezionefilm{
+        font-size: 20px;
+    }
+    .selezioneserie{
+        font-size: 20px;
+    }
+    .containerfilm{
+        width: calc(100% / 3);
+        font-size: 12px;
+    }
+    .containerserie{
+        width: calc(100% / 3);
+        font-size: 10px;
+    }
+ }
+ @media screen and ( max-width: 575px){
+    .selezionefilm{
+        font-size: 20px;
+    }
+    .selezioneserie{
+        font-size: 20px;
+    }
+    .containerfilm{
+        width: calc(100% / 1);
+        font-size: 15px ;
+    }
+    .containerserie{
+        width: calc(100% / 1);
+        font-size: 15px;
+    }
+        
+    }
+
+
+
 </style>

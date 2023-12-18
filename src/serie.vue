@@ -124,5 +124,51 @@ export default {
     h4 {
         margin: 10px 0px;
     }
+    /* media queries */
+    @media screen and ( max-width: 1400px){
+        .prospettiva{
+            padding-bottom: 200px;
+        }
+    }
+    @media screen and ( max-width: 992px){
+        .descrizioneover{
+        font-size: 15px;
+    }
+    span{
+        font-size: 12px;
+    }
+    .prospettiva{
+        padding-bottom: 160px;
+    }
+
+    }
+    @media screen and ( max-width: 768px){
+        .descrizioneover{
+        font-size: 10px;
+    }
+    span{
+        font-size: 12px;
+    }
+    .prospettiva{
+        padding-bottom: 150px;
+    }
+
+    }
+ @media screen and ( max-width: 575px){
+    .descrizioneover{
+        font-size: 15px;
+    }
+    span{
+        font-size: 15px;
+    }
+    .prospettiva{
+        padding-bottom: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+ }
+
+
+
 }
 </style>
