@@ -35,10 +35,10 @@ export default {
                         <span>voto:</span>
                         {{ numeroIntero() }}
                     </h4>
-                    <span v-for="n in numeroIntero()">
+                    <span class="stella" v-for="n in numeroIntero()">
                         <font-awesome-icon icon="fa-solid fa-star" />
                     </span>
-                    <span v-if="numeroIntero() < 5">
+                    <span class="stella" v-if="numeroIntero() < 5">
                         <span v-for=" stella in 5 - numeroIntero()">
                             <font-awesome-icon icon="fa-regular fa-star" />
                         </span>
@@ -66,11 +66,16 @@ export default {
     perspective: 900px;
     margin-top: 30px;
     margin-bottom: 80px;
+    .stella{
+        color: gold;
+    }
 
     .prospettiva {
         position: relative;
         transform-style: preserve-3d;
         transition: 0.8s;
+        width: 100%;
+        height: 100%;
     }
 
     .prospettiva:hover {
@@ -80,6 +85,7 @@ export default {
     .prospettiva:hover .descrizione {
         display: block;
         padding: 20px 20px;
+        transform: rotateY(180deg);
 
     }
 
@@ -92,9 +98,8 @@ export default {
 
 
     .prospettiva:hover {
-        transform: translateZ(20px) rotateX(1deg) rotateY(10deg);
         box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.5);
-        transform: translatey(20px) rotateX(1deg) rotateY(10deg);
+        transform: rotateY(180deg);
         border-radius: 20px;
 
     }
@@ -130,7 +135,7 @@ export default {
 
     img {
         border-radius: 10px;
-        width: 85%;
+        width: 80%;
         display: block;
         margin: 0 auto;
         padding-bottom: 30px;

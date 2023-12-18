@@ -84,7 +84,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 .containerfilm {
-    width: calc(100% / 4);
+    width: calc((100% / 4) - 1px);
     text-align: center;
 }
 
@@ -105,7 +105,7 @@ export default {
 }
 
 .containerserie {
-    width: calc(100% / 4);
+    width: calc((100% / 4) - 2px);
     text-align: center;
     margin-top: 20px;
 
