@@ -55,7 +55,6 @@ export default {
 
                     <div>{{ descrizione }}</div>
                 </div>
-
             </div>
         </div>
     </main>
@@ -66,7 +65,8 @@ export default {
     perspective: 900px;
     margin-top: 30px;
     margin-bottom: 80px;
-    .stella{
+
+    .stella {
         color: gold;
     }
 
@@ -92,8 +92,8 @@ export default {
     .descrizione {
         display: none;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 0px;
+        left: 0px;
     }
 
 
@@ -139,52 +139,65 @@ export default {
         display: block;
         margin: 0 auto;
     }
-    @media screen and ( max-width: 1400px){
-        .prospettiva{
-            padding-bottom: 150px;
 
-        } 
+    @media screen and (max-width: 1400px) {
+        .prospettiva {
+            padding-bottom: 180px;
+
+        }
     }
-    @media screen and ( max-width: 992px){
-        .titolo, .titolooriginale{
+
+    @media screen and (max-width: 992px) {
+
+        .titolo,
+        .titolooriginale {
             font-size: 13px;
         }
-        h3{
+
+        h3 {
             font-size: 13px;
         }
-        .prospettiva{
+
+        .prospettiva {
             padding-bottom: 150px;
 
         }
     }
-    @media screen and ( max-width: 768px){
-        .titolo, .titolooriginale{
+
+    @media screen and (max-width: 768px) {
+
+        .titolo,
+        .titolooriginale {
             font-size: 10px;
         }
-        h3{
+
+        h3 {
             font-size: 10px;
         }
-        .prospettiva{
-            padding-bottom: 150px;
+
+        .prospettiva {
+            padding-bottom: 170px;
 
         }
 
 
     }
-    @media screen and ( max-width: 575px){
-        h3{
+
+    @media screen and (max-width: 575px) {
+        h3 {
             font-size: 18px;
         }
-        .titolo{
+
+        .titolo {
             font-size: 18px;
         }
-        .prospettiva{
+
+        .prospettiva {
             padding-bottom: 30px;
             width: 80%;
             margin: 0 auto;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
 
         }
     }
-}
-</style>
+}</style>

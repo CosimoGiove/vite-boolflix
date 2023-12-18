@@ -71,6 +71,8 @@ export default {
         transform-style: preserve-3d;
         transition: 0.6s;
         padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
 
     }
     .prospettiva:hover{
@@ -106,6 +108,7 @@ export default {
     img {
         border-radius: 10px;
         width: 80%;
+        text-align: center;
     }
 
     .prospettiva:hover {
